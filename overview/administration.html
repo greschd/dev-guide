@@ -1,0 +1,369 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Administration &#8212; PyAnsys Developers Guide 0.2.dev0 documentation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/blank.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Contributing" href="contributing.html" />
+    <link rel="prev" title="Quick Start Guide" href="basic.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
+    .navbar-light {
+        background-color: black !important;
+    }
+</style>
+
+<div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="https://docs.pyansys.com/">
+  <img src="../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon" >
+      <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+    </span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="index.html">
+  Overview
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../guidelines/index.html">
+  Guidelines and Best Practices
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../library_description/index.html">
+  Library Overview
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../coding_style/index.html">
+  Coding Style
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../documentation_style/index.html">
+  API Documentation Style
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/pyansys/about" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="basic.html">
+   Quick Start Guide
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Project Administration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="contributing.html">
+   Contributing
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#licensing-and-approval">
+   Licensing and Approval
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#project-approval">
+   Project Approval
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#repository-management-and-standards">
+   Repository Management and Standards
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#release-procedures-and-versioning">
+   Release Procedures and Versioning
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#release-definition">
+     Release Definition
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#release-management">
+     Release Management
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#product-version-matching">
+     Product Version Matching
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="project-administration">
+<h1>Project Administration<a class="headerlink" href="#project-administration" title="Permalink to this headline">¶</a></h1>
+<p>The PyAnsys project allows you to create your own workflows and
+interfaces to Ansys products using Ansys APIs. While using PyAnsys
+libraries requires that the relevant Ansys products are licensed
+either directly or indirectly, you can distribute your custom-made
+applications and workflows internally or externally.</p>
+<div class="section" id="licensing-and-approval">
+<h2>Licensing and Approval<a class="headerlink" href="#licensing-and-approval" title="Permalink to this headline">¶</a></h2>
+<p>To allow for commercial use, a PyAnsys library must use the MIT
+license. Because this license falls in the BSD-style license class,
+PyAnsys libraries can be used as a shared library with no
+restrictions. This follows the pattern of including PyAnsys as a
+dependency in <code class="docutils literal notranslate"><span class="pre">install_requires</span></code> in the <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file.</p>
+<p>Should you choose to copy and include any PyAnsys project source uses,
+to make your library suitable for commercial use, you need only a copy
+of the original PyAnsys MIT license in the reused code.</p>
+<p>To view this license, see the <a class="reference external" href="https://github.com/pyansys/dev-guide/blob/main/LICENSE">LICENSE</a> file in the root directory
+of this repository. This file must be included in the root
+directory of the repository of every PyAnsys library.</p>
+</div>
+<div class="section" id="project-approval">
+<h2>Project Approval<a class="headerlink" href="#project-approval" title="Permalink to this headline">¶</a></h2>
+<p>Exposing new Ansys technologies through the PyAnsys project is subject
+to an internal review and decision process. Please reach out to
+Stephane Marguerin or Alexander Kaszynski for any requests.</p>
+</div>
+<div class="section" id="repository-management-and-standards">
+<span id="repository-management"></span><h2>Repository Management and Standards<a class="headerlink" href="#repository-management-and-standards" title="Permalink to this headline">¶</a></h2>
+<p>Each PyAnsys repository should at the minimum be administrated by a
+single individual with “Admin” permissions over the repository. This
+enables them to override any blocking pull requests or to change the
+settings for that repository, such as GitHub pages, repository
+description, or branch protection management.</p>
+<p>Each repository is expected to follow this minimum set of standards:</p>
+<ul class="simple">
+<li><p>Minimum code standards following PEP8. See <a class="reference internal" href="../coding_style/best_practices.html#best-practices"><span class="std std-ref">Best Practices</span></a>.</p></li>
+<li><p>CI/CD using GitHub actions or Azure DevOps to enforce coding standards. See <a class="reference internal" href="../library_description/ci_cd.html#ci-cd"><span class="std std-ref">CI/CD</span></a>.</p></li>
+<li><p>Publicly hosted documentation detailing API with examples. See
+<a class="reference internal" href="../documentation_style/index.html#api-documentation"><span class="std std-ref">API Documentation Style</span></a>.</p></li>
+<li><p>Unit testing with at least 80% test coverage. See <a class="reference internal" href="../library_description/ci_cd.html#ci-cd"><span class="std std-ref">CI/CD</span></a>.</p></li>
+<li><p>Infrastructure in place to deploy the library as a package on <a class="reference external" href="https://pypi.org/">PyPi</a>.  See <a class="reference internal" href="../library_description/packaging.html#packaging"><span class="std std-ref">Packaging</span></a>.</p></li>
+<li><p>Proper license file and author. See <a class="reference internal" href="../library_description/setup_file.html#setup-file"><span class="std std-ref">Setup File</span></a> and <a class="reference internal" href="../library_description/license.html#license-file"><span class="std std-ref">License File</span></a>.</p></li>
+</ul>
+</div>
+<div class="section" id="release-procedures-and-versioning">
+<h2>Release Procedures and Versioning<a class="headerlink" href="#release-procedures-and-versioning" title="Permalink to this headline">¶</a></h2>
+<p>PyAnsys library releases are managed through both automated
+and manual review processes.</p>
+<p>PyAnsys follows the <a class="reference external" href="https://semver.org/">Semantic Versioning</a> process as closely as
+possible:</p>
+<ul class="simple">
+<li><p><strong>Major</strong> version when you make incompatible API changes.</p></li>
+<li><p><strong>Minor</strong> version when you add functionality in a backwards compatible manner.</p></li>
+<li><p><strong>Patch</strong> version when you make backwards compatible bug fixes.</p></li>
+</ul>
+<p>One exception exists. MAJOR versions are not expected to be regularly
+released when any incompatible API changes are made. They are only expected to
+be released with major, globally-breaking API changes. This matches the
+versioning methodology for the “big three” data science python libraries: <a class="reference external" href="https://numpy.org/">NumPy</a>,
+<a class="reference external" href="https://www.scipy.org/">SciPy</a>, and <a class="reference external" href="https://pandas.pydata.org/">pandas</a>.</p>
+<div class="section" id="release-definition">
+<h3>Release Definition<a class="headerlink" href="#release-definition" title="Permalink to this headline">¶</a></h3>
+<p><strong>Major</strong></p>
+<p>Major releases denote global, major breaking API changes. Adding or
+changing a feature is not considered a globally-backwards incompatible
+API change. Rather, a major release and version bump should be made
+if globally-breaking changes are made that will require a
+significant refactor of any dependent modules.</p>
+<p>Note that <code class="docutils literal notranslate"><span class="pre">0.MINOR.PATCH</span></code> packages are expected to have fluid
+APIs and should be solidified at the <code class="docutils literal notranslate"><span class="pre">1.MINOR.PATCH</span></code> release. At
+that point, APIs are expected to be much more stable.</p>
+<p><strong>Minor</strong></p>
+<p>Minor releases are feature releases that improve the functionality and
+stability of a PyAnsys library.</p>
+<p><strong>Patch</strong></p>
+<p>Patch releases are for critical and important bug fixes that cannot or
+should not wait until a minor release.</p>
+</div>
+<div class="section" id="release-management">
+<h3>Release Management<a class="headerlink" href="#release-management" title="Permalink to this headline">¶</a></h3>
+<p>A release may be a major, minor, or patch release depending on the
+features, changes, or bug fixes to be released.</p>
+<p>See <a class="reference internal" href="../guidelines/dev_practices.html#release-procedures"><span class="std std-ref">Release Procedures</span></a> for the details on release management.</p>
+</div>
+<div class="section" id="product-version-matching">
+<h3>Product Version Matching<a class="headerlink" href="#product-version-matching" title="Permalink to this headline">¶</a></h3>
+<p>PyAnsys libraries should not match product versions. For example, the
+PyMAPDL library <code class="docutils literal notranslate"><span class="pre">ansys-mapdl-core</span></code> might have the version <code class="docutils literal notranslate"><span class="pre">0.59.0</span></code>
+whereas the product version is 21.2 (2021 R2). The reason
+behind this is PyAnsys libraries are expected to be developed outside
+the product release cycle in a rapid CI/CD manner.</p>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright (c) 2022 ANSYS, Inc. All rights reserved.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.2.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,375 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Transfer and Abstraction &#8212; PyAnsys Developers Guide 0.2.dev0 documentation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/blank.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Logging Guidelines" href="logging.html" />
+    <link rel="prev" title="Application Interface Abstraction" href="app_interface_abstraction.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
+    .navbar-light {
+        background-color: black !important;
+    }
+</style>
+
+<div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="https://docs.pyansys.com/">
+  <img src="../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon" >
+      <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+    </span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../overview/index.html">
+  Overview
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="index.html">
+  Guidelines and Best Practices
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../library_description/index.html">
+  Library Overview
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../coding_style/index.html">
+  Coding Style
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../documentation_style/index.html">
+  API Documentation Style
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/pyansys/about" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="dev_practices.html">
+   Development Practices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="version_support.html">
+   Python Version Support
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="doc_practices.html">
+   Documentation Practices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="app_interface_abstraction.html">
+   Application Interface Abstraction
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Data Transfer and Abstraction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="logging.html">
+   Logging Guidelines
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="service_abstraction.html">
+   Service Abstraction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="PyMAPDL_WSL_Guide.html">
+   PyAnsys Libraries on a Windows Subsystem for Linux and Docker
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rest-versus-rpc-data-and-model-abstraction">
+   REST Versus RPC Data and Model Abstraction
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#api-chattiness">
+     API Chattiness
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#compatibility-and-efficiency">
+     Compatibility and Efficiency
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="data-transfer-and-abstraction">
+<h1>Data Transfer and Abstraction<a class="headerlink" href="#data-transfer-and-abstraction" title="Permalink to this headline">¶</a></h1>
+<p>Abstracted APIs should attempt to hide the implementation details of
+the remote or local API in a well organized data model.  This data
+model should avoid returning raw JSON files, gRPC messages, SWIG objects,
+or .NET objects. It should preferably return standard Python objects
+like lists, strings, dictionaries when useful, and <a class="reference external" href="https://numpy.org/">NumPy</a>
+arrays or <a class="reference external" href="https://pandas.pydata.org/">pandas</a> dataframes for more complex data.</p>
+<p>For example, consider a simple mesh in MAPDL:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">prep7</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">block</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">et</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">186</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">vmesh</span><span class="p">(</span><span class="s1">&#39;ALL&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>At this point, there are only two ways within MAPDL to access the nodes and
+connectivity of the mesh, You can either print it using the <code class="docutils literal notranslate"><span class="pre">NLIST</span></code>
+command or write it to disk using the <code class="docutils literal notranslate"><span class="pre">CDWRITE</span></code> command. Both of these
+methods are remarkably inefficient, requiring:</p>
+<ul class="simple">
+<li><p>Serializing the data to ASCII on the server</p></li>
+<li><p>Transferring the data</p></li>
+<li><p>Deserializing the data within Python</p></li>
+<li><p>Converting the data to an array</p></li>
+</ul>
+<p>This example prints node coordinates using the <code class="docutils literal notranslate"><span class="pre">NLIST</span></code> command:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mapdl</span><span class="o">.</span><span class="n">nlist</span><span class="p">())</span>
+<span class="go">    NODE        X             Y             Z</span>
+<span class="go">     1   0.0000        1.0000        0.0000</span>
+<span class="go">     2   0.0000        0.0000        0.0000</span>
+<span class="go">     3   0.0000       0.75000        0.0000</span>
+</pre></div>
+</div>
+<p>It’s more efficient to transfer the node array as either a
+series of repeated <code class="docutils literal notranslate"><span class="pre">Node</span></code> messages or, better yet, to serialize
+the entire array into bytes and then deserialize it on the client
+side. For a concrete and standalone example of this in C++ and Python,
+see <a class="reference external" href="https://github.com/pyansys/grpc_chunk_stream_demo">grpc_chunk_stream_demo</a>.</p>
+<p>While raw byte streams are vastly more efficient, one major disadvantage
+is that the structure of the data is lost when serializing the array.
+This should be considered when deciding how to write your API.</p>
+<p>Regardless of the serialization or message format, users will
+expect Python native types (or a common type for a common library like
+<code class="docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code> or <code class="docutils literal notranslate"><span class="pre">numpy.ndarray</span></code>).  Here, within <a class="reference external" href="https://github.com/pyansys/pymapdl">PyMAPDL</a>,
+the nodes of the mesh are accessible as the <code class="docutils literal notranslate"><span class="pre">nodes</span></code> attribute within
+the <code class="docutils literal notranslate"><span class="pre">mesh</span></code> attribute, which provides an encapsulation of the mesh
+within the MAPDL database.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mapdl</span><span class="o">.</span><span class="n">mesh</span><span class="o">.</span><span class="n">nodes</span>
+<span class="go">array([[0.  , 1.  , 0.  ],</span>
+<span class="go">       [0.  , 0.  , 0.  ],</span>
+<span class="go">       [0.  , 0.75, 0.  ],</span>
+<span class="go">       ...</span>
+<span class="go">       [0.5 , 0.5 , 0.75],</span>
+<span class="go">       [0.5 , 0.75, 0.5 ],</span>
+<span class="go">       [0.75, 0.5 , 0.5 ]])</span>
+</pre></div>
+</div>
+<div class="section" id="rest-versus-rpc-data-and-model-abstraction">
+<h2>REST Versus RPC Data and Model Abstraction<a class="headerlink" href="#rest-versus-rpc-data-and-model-abstraction" title="Permalink to this headline">¶</a></h2>
+<p>Because of the nature of most Ansys products, our applications and
+services can either fit into the RPC interface, where the API is
+centered around operations and commands, or the REST model, where
+the API is centered around resources. Regardless of the the interface
+style, there are several items to consider.</p>
+<div class="section" id="api-chattiness">
+<h3>API Chattiness<a class="headerlink" href="#api-chattiness" title="Permalink to this headline">¶</a></h3>
+<p>APIs must be efficient to avoid creating chatty input and output.
+Because many Ansys products fit well with the RPC API implementation,
+there is a temptation to design APIs that require constant communication
+with the remote or local service. However, just because RPC interfaces
+can do this, it does not mean that they should. The assumption should be
+that each RPC call takes significant time to execute.</p>
+<p>One way to avoid constant communication with the service is to serialize
+several “commands” for services that employ an internal “command pattern”
+for data exchange. Another approach is to encapsulate the data model
+entirely on the server to avoid data transfer whenever possible and
+expose only a limited number of RPC methods in the front-facing API.</p>
+</div>
+<div class="section" id="compatibility-and-efficiency">
+<h3>Compatibility and Efficiency<a class="headerlink" href="#compatibility-and-efficiency" title="Permalink to this headline">¶</a></h3>
+<p>APIs should be designed to be compatible with as many languages and
+platforms as possible.  <a class="reference external" href="https://grpc.io/">gRPC</a> for RPC-like interfaces should be one
+of the first choices due to its compatibility with nearly all popular
+languages and its efficiency over REST in terms of speed, memory, and
+payload size.</p>
+<p>Typically, REST data exchanges should be limited to short messages
+transferred via JSON files, and gRPC should be used for large data
+transfers and bidirectional streaming.</p>
+<p>Choosing gRPC over REST is generally preferable due to the performance
+benefits of a binary compatible protocol. While REST provides a variety of
+benefits, for complex client/server interactions, it is best to have an
+interface that can efficiently exchange a wide variety of data formats and
+messages.</p>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright (c) 2022 ANSYS, Inc. All rights reserved.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.2.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,414 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Packaging &#8212; PyAnsys Developers Guide 0.2.dev0 documentation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/blank.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Coding Style" href="../coding_style/index.html" />
+    <link rel="prev" title="License File" href="license.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
+    .navbar-light {
+        background-color: black !important;
+    }
+</style>
+
+<div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="https://docs.pyansys.com/">
+  <img src="../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon" >
+      <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+    </span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../overview/index.html">
+  Overview
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../guidelines/index.html">
+  Guidelines and Best Practices
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="index.html">
+  Library Overview
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../coding_style/index.html">
+  Coding Style
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../documentation_style/index.html">
+  API Documentation Style
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/pyansys/about" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="library_structure.html">
+   Library Structure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="library_names.html">
+   Project, Repository, and Library Names
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="repo_directory_structure.html">
+   Repository Directory Structure
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ci_cd.html">
+   CI/CD
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="source_organization.html">
+   Source Organization
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="readme_file.html">
+   README File
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="setup_file.html">
+   Setup File
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="doc_directory.html">
+   Documentation Directory
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="license.html">
+   License File
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Packaging
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#namespace-packaging">
+   Namespace Packaging
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#required-files">
+   Required Files
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setup-file">
+   Setup File
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#generate-the-package-and-upload-it-on-pypi">
+   Generate the Package and Upload It on PyPI
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tag-a-release">
+   Tag a Release
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#install-a-package">
+   Install a Package
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="packaging">
+<span id="id1"></span><h1>Packaging<a class="headerlink" href="#packaging" title="Permalink to this headline">¶</a></h1>
+<p>A Python package organizes and structures a Python library, which contains several
+modules and assets such as examples or binary extensions. A Python package
+offers an easy, reliable, and comprehensive way to distribute and install
+a Python library on a variety of platforms and environments.</p>
+<div class="section" id="namespace-packaging">
+<h2>Namespace Packaging<a class="headerlink" href="#namespace-packaging" title="Permalink to this headline">¶</a></h2>
+<p>A PyAnsys library uses <a class="reference external" href="https://packaging.python.org/guides/packaging-namespace-packages/">namespace packaging</a>.
+Namespace packages allow a user to easily split subpackages from a package into
+a single, independent distribution.</p>
+<p>Three different approaches are currently available for creating a namespace package:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://packaging.python.org/guides/packaging-namespace-packages/#native-namespace-packages">native namespace packages</a></p></li>
+<li><p>pkgutil-style namespace packages</p></li>
+<li><p>pkg_resources-style namespace packages</p></li>
+</ul>
+</div>
+<div class="section" id="required-files">
+<h2>Required Files<a class="headerlink" href="#required-files" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>README.rst file: Describes the purpose of the package.
+<em>The format of this file must be reStructuredText.</em></p></li>
+<li><p>LICENSE file: Specifies copyrights and required authorization.</p></li>
+<li><p>setup.py file: Provides package information.
+The presence of this file indicate that the package was likely created using <code class="docutils literal notranslate"><span class="pre">disutils</span></code>,
+which is the Python standard for building and distributing a Python package.</p></li>
+</ul>
+</div>
+<div class="section" id="setup-file">
+<h2>Setup File<a class="headerlink" href="#setup-file" title="Permalink to this headline">¶</a></h2>
+<p>The <a class="reference external" href="https://packaging.python.org/tutorials/packaging-projects/#configuring-metadata">setup.py</a> file is the build script for <code class="docutils literal notranslate"><span class="pre">setuptools</span></code>. It exposes dynamic metadata and contains
+package information, such as a description, author, and version.
+In this file, the <code class="docutils literal notranslate"><span class="pre">setuptools</span></code> module is used to configure the metadata (as opposed to <code class="docutils literal notranslate"><span class="pre">distutils</span></code>).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">setuptools</span>
+<span class="n">setuptools</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This file gathers all namespace packages and files that must be included in the distributed
+package.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">packages</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">package</span> <span class="ow">in</span> <span class="n">setuptools</span><span class="o">.</span><span class="n">find_namespace_packages</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s1">&#39;ansys*&#39;</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">package</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;ansys.tools.example_coverage&#39;</span><span class="p">):</span>
+        <span class="n">packages</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">package</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>It also extracts the version number from the <code class="docutils literal notranslate"><span class="pre">_version.py</span></code> file located in the
+<code class="docutils literal notranslate"><span class="pre">ansys/&lt;product&gt;/library</span></code> directory of the source code.</p>
+</div>
+<div class="section" id="generate-the-package-and-upload-it-on-pypi">
+<h2>Generate the Package and Upload It on PyPI<a class="headerlink" href="#generate-the-package-and-upload-it-on-pypi" title="Permalink to this headline">¶</a></h2>
+<p>The first time that you want to upload a package on PyPI under the <a class="reference external" href="https://pypi.org/user/ansys/">ansys</a>
+account, you must perform the following process manually.</p>
+<p>Create the python package.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">sdist</span>
+</pre></div>
+</div>
+<p>Verify the distribution’s long description rendering with <code class="docutils literal notranslate"><span class="pre">twine</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">twine</span>
+<span class="n">twine</span> <span class="n">check</span> <span class="n">dist</span><span class="o">/*</span>
+</pre></div>
+</div>
+<p>Upload the package to PyPI using <code class="docutils literal notranslate"><span class="pre">twine</span></code> and the upload token generated for the <code class="docutils literal notranslate"><span class="pre">ansys</span></code> PyPI account.
+Contact <a class="reference external" href="mailto:alexander&#46;kaszynski&#37;&#52;&#48;ansys&#46;com">alexander<span>&#46;</span>kaszynski<span>&#64;</span>ansys<span>&#46;</span>com</a> for the token.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">twine</span> <span class="n">upload</span> <span class="o">-</span><span class="n">u</span> <span class="n">__token__</span> <span class="o">-</span><span class="n">p</span> <span class="o">&lt;</span><span class="n">TOKEN_FOR_PYPI</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">skip</span><span class="o">-</span><span class="n">existing</span> <span class="n">dist</span><span class="o">/*</span>
+</pre></div>
+</div>
+<p>For the next release upload, you can do it through the CI/CD workflow after generating a token just for this package.
+Create a <a class="reference external" href="https://docs.github.com/en/actions/reference/encrypted-secrets">secret</a> in GitHub settings.
+Name it <code class="docutils literal notranslate"><span class="pre">PYPI_TOKEN</span></code> and assign it the token provided by PyPI.
+This token will be reused in the CI/CD workflow handling the package distribution.</p>
+</div>
+<div class="section" id="tag-a-release">
+<h2>Tag a Release<a class="headerlink" href="#tag-a-release" title="Permalink to this headline">¶</a></h2>
+<p>To deploy a new package on PyPI, you must tag a release under a release branch. The PyAnsys project
+follows the <a class="reference external" href="https://trunkbaseddevelopment.com/">trunk-based development</a> source-control branching model, where the main development
+branch is always in a releasable state.</p>
+<p>To tag the release, update your main local branch.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="n">main</span>
+<span class="n">git</span> <span class="n">pull</span>
+</pre></div>
+</div>
+<p>Then, create a release branch.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">release</span><span class="o">/</span><span class="n">MAJOR</span><span class="o">.</span><span class="n">MINOR</span>
+</pre></div>
+</div>
+<p>Bump the version number in the <code class="docutils literal notranslate"><span class="pre">_version</span></code> file to <code class="docutils literal notranslate"><span class="pre">MAJOR.MINOR.PATCH</span></code>.</p>
+<p>Commit and push your changes and then create the tag.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">am</span> <span class="s2">&quot;Increase version to v&lt;MAJOR.MINOR.PATCH&gt;&quot;</span>
+<span class="n">git</span> <span class="n">tag</span> <span class="n">v</span><span class="o">&lt;</span><span class="n">MAJOR</span><span class="o">.</span><span class="n">MINOR</span><span class="o">.</span><span class="n">PATCH</span><span class="o">&gt;</span>
+<span class="n">git</span> <span class="n">push</span> <span class="o">--</span><span class="n">tags</span>
+</pre></div>
+</div>
+<p>Following this tag creation, the workflow responsible for the distribution
+will be automatically triggered.</p>
+</div>
+<div class="section" id="install-a-package">
+<h2>Install a Package<a class="headerlink" href="#install-a-package" title="Permalink to this headline">¶</a></h2>
+<p>Install a package with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">ansys</span><span class="o">.&lt;</span><span class="n">product</span><span class="o">&gt;.&lt;</span><span class="n">library</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>To create a package complying with the above standards, here is the minimal content of your PyAnsys library:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ansys</span><span class="o">/&lt;</span><span class="n">product</span><span class="o">&gt;/&lt;</span><span class="n">library</span><span class="o">&gt;/</span><span class="fm">__init__</span><span class="o">.</span><span class="n">py</span>
+<span class="n">LICENSE</span>
+<span class="n">README</span><span class="o">.</span><span class="n">rst</span>
+<span class="n">setup</span><span class="o">.</span><span class="n">py</span>
+<span class="n">tests</span><span class="o">/</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright (c) 2022 ANSYS, Inc. All rights reserved.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.2.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

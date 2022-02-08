@@ -1,0 +1,449 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Documentation &#8212; PyAnsys Developers Guide 0.2.dev0 documentation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/blank.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="real" href="api/pyansys_sphinx_theme.samples.Complex.real.html" />
+    <link rel="prev" title="Docstring Standards" href="docstrings.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
+    .navbar-light {
+        background-color: black !important;
+    }
+</style>
+
+<div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="https://docs.pyansys.com/">
+  <img src="../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon" >
+      <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+    </span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../overview/index.html">
+  Overview
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../guidelines/index.html">
+  Guidelines and Best Practices
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../library_description/index.html">
+  Library Overview
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../coding_style/index.html">
+  Coding Style
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="index.html">
+  API Documentation Style
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/pyansys/about" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="docstrings.html">
+   Docstring Standards
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   Class Documentation
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="api/pyansys_sphinx_theme.samples.Complex.real.html">
+     real
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="api/pyansys_sphinx_theme.samples.Complex.imag.html">
+     imag
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="api/pyansys_sphinx_theme.samples.Complex.abs.html">
+     abs
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="coding_style.html">
+   Coding Style and Best Practices
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#manual-documentation">
+   Manual Documentation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#auto-generated-documentation">
+   Auto-Generated Documentation
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="class-documentation">
+<h1>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">¶</a></h1>
+<p>There are two main ways of using Sphinx to document an API class:</p>
+<ul class="simple">
+<li><p>Manually describe “how” and “why” to use a class in either
+a “User Guide” or an example within the library’s documentation</p></li>
+<li><p>Automatically generate API documentation for classes using the
+<code class="docutils literal notranslate"><span class="pre">autoclass</span></code> or <code class="docutils literal notranslate"><span class="pre">autosummary</span></code> directive</p></li>
+</ul>
+<div class="section" id="manual-documentation">
+<h2>Manual Documentation<a class="headerlink" href="#manual-documentation" title="Permalink to this headline">¶</a></h2>
+<p>To manually describe “how” and “why” to exercise a class, use the
+<code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">code::</span> <span class="pre">python</span></code> directive:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Initialize ``my_module.MyClass`` with initial parameters. These
+parameters are automatically assigned to the class.
+
+ .. code:: python
+
+    &gt;&gt;&gt; from my_module import MyClass
+    &gt;&gt;&gt; my_obj = MyClass(parm1=&#39;apple&#39;, parm2=&#39;orange&#39;)
+    &gt;&gt;&gt; my_obj.parm1
+    &#39;apple&#39;
+</pre></div>
+</div>
+<p>This is rendered as:</p>
+<p>Initialize <code class="docutils literal notranslate"><span class="pre">my_module.MyClass</span></code> with initial parameters.  These
+parameters are automatically assigned to the class.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">my_module</span> <span class="kn">import</span> <span class="n">MyClass</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_obj</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">(</span><span class="n">parm1</span><span class="o">=</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="n">parm2</span><span class="o">=</span><span class="s1">&#39;orange&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_obj</span><span class="o">.</span><span class="n">parm1</span>
+<span class="go">&#39;apple&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="auto-generated-documentation">
+<h2>Auto-Generated Documentation<a class="headerlink" href="#auto-generated-documentation" title="Permalink to this headline">¶</a></h2>
+<p>To automatically generate class descriptions, use either the <code class="docutils literal notranslate"><span class="pre">autoclass</span></code>
+or <code class="docutils literal notranslate"><span class="pre">autosummary</span></code> directive.</p>
+<p>For simple classes, use the <code class="docutils literal notranslate"><span class="pre">autoclass</span></code> directive:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">autoclass</span><span class="p">::</span> <span class="n">pyansys_sphinx_theme</span><span class="o">.</span><span class="n">samples</span><span class="o">.</span><span class="n">ExampleClass</span>
+    <span class="p">:</span><span class="n">members</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>This is rendered as:</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyansys_sphinx_theme.samples.ExampleClass">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyansys_sphinx_theme.samples.</span></span><span class="sig-name descname"><span class="pre">ExampleClass</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">param1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param3</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyansys_sphinx_theme.samples.ExampleClass" title="Permalink to this definition">¶</a></dt>
+<dd><p>The summary line for a class docstring should fit on one line.</p>
+<p>Attributes should be documented inline with the attribute’s
+declaration.</p>
+<p>Properties created with the <code class="docutils literal notranslate"><span class="pre">&#64;property</span></code> decorator should be
+documented in the property’s getter method.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>param1</strong> (<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) – Description of <cite>param1</cite>.</p></li>
+<li><p><strong>param2</strong> (<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#list" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">list</span></code></a> of <a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">str</span></code></a>) – Description of <cite>param2</cite>. Multiple
+lines are supported.</p></li>
+<li><p><strong>param3</strong> (<a class="reference external" href="https://docs.python.org/dev/library/functions.html#int" title="(in Python v3.11)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">int</span></code></a>, optional) – Description of <cite>param3</cite>.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<p>An example of how to initialize this class should be given.</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">pyansys_sphinx_theme</span> <span class="kn">import</span> <span class="n">samples</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">example</span> <span class="o">=</span> <span class="n">samples</span><span class="o">.</span><span class="n">ExampleClass</span><span class="p">(</span><span class="s1">&#39;mystr&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;orange&#39;</span><span class="p">],</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyansys_sphinx_theme.samples.ExampleClass.example_method">
+<span class="sig-name descname"><span class="pre">example_method</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">param1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">param2</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyansys_sphinx_theme.samples.ExampleClass.example_method" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class methods are similar to regular functions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>param1</strong> (<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) – The first parameter.</p></li>
+<li><p><strong>param2</strong> (<a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) – The second parameter.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True if successful, False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/dev/library/functions.html#bool" title="(in Python v3.11)">bool</a></p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Do not include the <cite>self</cite> parameter in the <code class="docutils literal notranslate"><span class="pre">Parameters</span></code> section.</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">example</span><span class="o">.</span><span class="n">example_method</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyansys_sphinx_theme.samples.ExampleClass.readonly_property">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">readonly_property</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/dev/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></em><a class="headerlink" href="#pyansys_sphinx_theme.samples.ExampleClass.readonly_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Properties should be documented in their getter method.</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">example</span><span class="o">.</span><span class="n">readonly_property</span>
+<span class="go">&quot;readonly_property&quot;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyansys_sphinx_theme.samples.ExampleClass.readwrite_property">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">readwrite_property</span></span><a class="headerlink" href="#pyansys_sphinx_theme.samples.ExampleClass.readwrite_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Properties with both a getter and setter
+should only be documented in their getter method.</p>
+<p>If the setter method contains notable behavior, it should be
+mentioned here.</p>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">example</span><span class="o">.</span><span class="n">readwrite_property</span>
+<span class="go">&quot;readwrite_property&quot;</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">example</span><span class="o">.</span><span class="n">readwrite_property</span> <span class="o">=</span> <span class="s1">&#39;hello world&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">example</span><span class="o">.</span><span class="n">readwrite_property</span>
+<span class="go">&#39;hello world&#39;</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<p>For complex classes with many methods, use the
+<code class="docutils literal notranslate"><span class="pre">autosummary</span></code> directive:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">..</span> <span class="n">autoclass</span><span class="p">::</span> <span class="n">pyansys_sphinx_theme</span><span class="o">.</span><span class="n">samples</span><span class="o">.</span><span class="n">Complex</span>
+
+<span class="o">..</span> <span class="n">autosummary</span><span class="p">::</span>
+   <span class="p">:</span><span class="n">toctree</span><span class="p">:</span> <span class="n">api</span><span class="o">/</span>
+
+   <span class="n">pyansys_sphinx_theme</span><span class="o">.</span><span class="n">samples</span><span class="o">.</span><span class="n">Complex</span><span class="o">.</span><span class="n">real</span>
+   <span class="n">pyansys_sphinx_theme</span><span class="o">.</span><span class="n">samples</span><span class="o">.</span><span class="n">Complex</span><span class="o">.</span><span class="n">imag</span>
+   <span class="n">pyansys_sphinx_theme</span><span class="o">.</span><span class="n">samples</span><span class="o">.</span><span class="n">Complex</span><span class="o">.</span><span class="n">abs</span>
+</pre></div>
+</div>
+<p>The above code generates the following documentation, with each
+method or attribute on its own page.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyansys_sphinx_theme.samples.Complex">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyansys_sphinx_theme.samples.</span></span><span class="sig-name descname"><span class="pre">Complex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">real</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">imag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pyansys_sphinx_theme.samples.Complex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Custom implementation of a complex number.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>real</strong> (<a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – Real component of the complex number.</p></li>
+<li><p><strong>imag</strong> (<a class="reference external" href="https://docs.python.org/dev/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a><em>, </em><em>optional</em>) – Imaginary component of the complex number.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">my_num</span> <span class="o">=</span> <span class="n">Complex</span><span class="p">(</span><span class="n">real</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">imag</span><span class="o">=-</span><span class="mf">1.0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">my_num</span>
+<span class="go">(1.0 + 1.0j)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<table class="longtable table autosummary">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="api/pyansys_sphinx_theme.samples.Complex.real.html#pyansys_sphinx_theme.samples.Complex.real" title="pyansys_sphinx_theme.samples.Complex.real"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyansys_sphinx_theme.samples.Complex.real</span></code></a></p></td>
+<td><p>Real component of this complex number.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="api/pyansys_sphinx_theme.samples.Complex.imag.html#pyansys_sphinx_theme.samples.Complex.imag" title="pyansys_sphinx_theme.samples.Complex.imag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyansys_sphinx_theme.samples.Complex.imag</span></code></a></p></td>
+<td><p>Real component of this complex number.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="api/pyansys_sphinx_theme.samples.Complex.abs.html#pyansys_sphinx_theme.samples.Complex.abs" title="pyansys_sphinx_theme.samples.Complex.abs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pyansys_sphinx_theme.samples.Complex.abs</span></code></a></p></td>
+<td><p>Absolute value of this number</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright (c) 2022 ANSYS, Inc. All rights reserved.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.2.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

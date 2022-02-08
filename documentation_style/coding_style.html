@@ -1,0 +1,588 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding Style and Best Practices &#8212; PyAnsys Developers Guide 0.2.dev0 documentation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/blank.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="abs" href="api/pyansys_sphinx_theme.samples.Complex.abs.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
+    .navbar-light {
+        background-color: black !important;
+    }
+</style>
+
+<div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="https://docs.pyansys.com/">
+  <img src="../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon" >
+      <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+    </span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../overview/index.html">
+  Overview
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../guidelines/index.html">
+  Guidelines and Best Practices
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../library_description/index.html">
+  Library Overview
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../coding_style/index.html">
+  Coding Style
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="index.html">
+  API Documentation Style
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/pyansys/about" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="docstrings.html">
+   Docstring Standards
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="class_documentation.html">
+   Class Documentation
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="api/pyansys_sphinx_theme.samples.Complex.real.html">
+     real
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="api/pyansys_sphinx_theme.samples.Complex.imag.html">
+     imag
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="api/pyansys_sphinx_theme.samples.Complex.abs.html">
+     abs
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Coding Style and Best Practices
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#deprecation-best-practice">
+   Deprecation Best Practice
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#semantic-versioning-and-api-changes">
+   Semantic Versioning and API Changes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#docstring-examples-best-practice">
+   Docstring Examples Best Practice
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#setting-up-doctest">
+     Setting Up
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       doctest
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-pytest-fixtures">
+     Using
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       pytest
+      </span>
+     </code>
+     Fixtures
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#useful-features">
+     Useful Features
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ellipses-for-random-output">
+       Ellipses for Random Output
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#doctest-skip">
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         doctest
+        </span>
+       </code>
+       Skip
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="coding-style-and-best-practices">
+<h1>Coding Style and Best Practices<a class="headerlink" href="#coding-style-and-best-practices" title="Permalink to this headline">¶</a></h1>
+<p>This page provides best practices applicable to the <a class="reference external" href="https://pypi.org/project/pyansys/">PyAnsys</a> project.  The intent is
+not to repeat coding style documentation but rather to state
+the approach used by the PyAnsys project when there are any
+delineations, clarifications, or additional procedures above and
+beyond <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">PEP8</a>.</p>
+<p>For example, <a class="reference external" href="https://stackoverflow.com/questions/2536307">Stack Overflow Answer</a>
+outlines deprecation best practices and a <a class="reference external" href="https://deprecation.readthedocs.io/">Deprecation library</a>
+already exists. However, there is no official guidance regarding deprecating features
+in an API within Python. This page seeks to clarify this issue and others.</p>
+<p>Aside from the following PyAnsys-specific directives, the best coding practice is to
+follow established guidelines from <a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">PEP8</a>.</p>
+<div class="section" id="deprecation-best-practice">
+<h2>Deprecation Best Practice<a class="headerlink" href="#deprecation-best-practice" title="Permalink to this headline">¶</a></h2>
+<p>Whenever a method, class, or function is deprecated, you must provide
+an old method that both calls the new method and raises a warning. Or,
+if the method has been removed, you must raise an <code class="docutils literal notranslate"><span class="pre">AttributeError</span></code>.</p>
+<p>In the docstring of the older method, provide a <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-deprecated">Sphinx Deprecated Directive</a>
+and a link to the newer method. This way, users are notified that an API change
+has occurred and are given an opportunity to change their code. Otherwise,
+stability concerns can cause users to stop upgrading, or worse, stop using
+Ansys APIs. For this reason, it’s best to use a warning first and then use
+an error after a minor release or two.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">FieldAnalysis2D</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Class docstring&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">assignmaterial</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">mat</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Assign a material to one or more objects.</span>
+
+<span class="sd">        .. deprecated:: 0.4.0</span>
+<span class="sd">           Use :func:`FieldAnalysis2D.assign_material` instead.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># one of the following:</span>
+
+        <span class="c1"># raise a DeprecationWarning. User won&#39;t have to change anything.</span>
+        <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;assignmaterial is deprecated. Use assign_material instead.&#39;</span><span class="p">,</span>
+                      <span class="ne">DeprecationWarning</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assign_material</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">mat</span><span class="p">)</span>
+
+        <span class="c1"># or raise an AttributeError (could also make a custom DeprecationError)</span>
+        <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span><span class="s1">&#39;assignmaterial is deprecated. Use assign_material instead.&#39;</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">assign_material</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">obj</span><span class="p">,</span> <span class="n">mat</span><span class="p">):</span>
+        <span class="s2">&quot;&quot;&quot;Assign a material to one or more objects.</span>
+<span class="s2">        ...</span>
+</pre></div>
+</div>
+<p>If a method is removed entirely, there’s no reason to provide a link
+to the old method. If the method is part of a class, raise an
+<code class="docutils literal notranslate"><span class="pre">AttributeError</span></code>. Otherwise, raise an <code class="docutils literal notranslate"><span class="pre">Exception</span></code>.</p>
+<p>This example raises an <code class="docutils literal notranslate"><span class="pre">Exception</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Print ``&quot;hello_world&quot;``</span>
+
+<span class="sd">    .. deprecated:: 0.4.0</span>
+<span class="sd">        This function has been deprecated.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;`my_function` has been deprecated.&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Because there is no built-in deprecation error within
+Python, an alternative is to create a custom <code class="docutils literal notranslate"><span class="pre">DeprecationError</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">DeprecationError</span><span class="p">(</span><span class="ne">RuntimeError</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Used for depreciated methods and functions.&quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="o">=</span><span class="s1">&#39;This feature has been depreciated.&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Empty init.&quot;&quot;&quot;</span>
+        <span class="ne">RuntimeError</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>You then use this custom <code class="docutils literal notranslate"><span class="pre">DeprecationError</span></code> in place of an <code class="docutils literal notranslate"><span class="pre">Exception</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">hello_world</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Print ``&quot;hello_world&quot;``</span>
+
+<span class="sd">    .. deprecated:: 0.4.0</span>
+<span class="sd">        This function has been deprecated.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">raise</span> <span class="n">DeprecationError</span><span class="p">(</span><span class="s1">&#39;`my_function` has been deprecated&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="semantic-versioning-and-api-changes">
+<h2>Semantic Versioning and API Changes<a class="headerlink" href="#semantic-versioning-and-api-changes" title="Permalink to this headline">¶</a></h2>
+<p>According to <a class="reference external" href="https://semver.org/">Semantic Versioning</a>, you should
+increment the MAJOR version when you make incompatible changes.
+However, adding or eliminating methods should not be considered
+incompatible changes to a code base but rather incremental changes
+that are backwards-compatible (to a degree). Therefore, whenever a
+method or feature is added, changed, or removed, the minor version
+should be bumped.</p>
+<p>To avoid constantly bumping the minor version, one approach to
+source-control branching is to create release branches where only
+patch fixes are pushed and API changes occur between minor
+releases. See <a class="reference external" href="https://trunkbaseddevelopment.com/">Trunk Based Development</a>.</p>
+<p>In summary, the mainline branch (commonly named <code class="docutils literal notranslate"><span class="pre">main</span></code> or <code class="docutils literal notranslate"><span class="pre">master</span></code>)
+must always be ready to release, and developers should create
+release branches to maintain at least one prior minor version.</p>
+<p>The reason behind this is if a user wants to use API 0.4.0 instead of
+0.5.0 due to some pressing deadline where they want to avoid a code
+refactor, the maintainers of the API can back-port a bug-fix via <code class="docutils literal notranslate"><span class="pre">git</span>
+<span class="pre">cherry-pick</span> <span class="pre">&lt;COMMIT-HASH&gt;</span></code>.  This gives users some time to update any
+projects dependent on the API while still treating them as
+“first-class” users.</p>
+<p>Note that due to the complexity of maintaining multiple “release branches”
+in a repository, the number of active release branches should be between
+one and three.</p>
+</div>
+<div class="section" id="docstring-examples-best-practice">
+<h2>Docstring Examples Best Practice<a class="headerlink" href="#docstring-examples-best-practice" title="Permalink to this headline">¶</a></h2>
+<p>Defining docstring examples for methods and classes is extremely
+useful. The examples give users an easy place to start when trying
+out the API, showing them exactly how to operate on a method or
+class. By using <code class="docutils literal notranslate"><span class="pre">doctest</span></code> through <code class="docutils literal notranslate"><span class="pre">pytest</span></code>, docstring examples can
+also be used to perform regression testing to verify that the code is
+executing as expected.</p>
+<p>This is an important feature of maintainable documentation as examples
+must always match the API they are documenting. When using <cite>doctest`</cite>
+through <code class="docutils literal notranslate"><span class="pre">pytest</span></code>, any changes within the API without corresponding
+changes in the documentation will trigger doctest failures.</p>
+<div class="section" id="setting-up-doctest">
+<h3>Setting Up <code class="docutils literal notranslate"><span class="pre">doctest</span></code><a class="headerlink" href="#setting-up-doctest" title="Permalink to this headline">¶</a></h3>
+<p>First, install <code class="docutils literal notranslate"><span class="pre">pytest</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">pytest</span>
+</pre></div>
+</div>
+<p>Now, run <code class="docutils literal notranslate"><span class="pre">doctest</span></code> on any Python file.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pytest</span> <span class="o">--</span><span class="n">doctest</span><span class="o">-</span><span class="n">modules</span> <span class="n">file</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">doctest</span></code> searches for examples in the docstrings and executes them
+to verify that they function as written.</p>
+</div>
+<div class="section" id="using-pytest-fixtures">
+<h3>Using <code class="docutils literal notranslate"><span class="pre">pytest</span></code> Fixtures<a class="headerlink" href="#using-pytest-fixtures" title="Permalink to this headline">¶</a></h3>
+<p>To define a setup sequence before the <code class="docutils literal notranslate"><span class="pre">doctest</span></code> run or before a given
+module is tested, you use <code class="docutils literal notranslate"><span class="pre">pytest</span></code> fixtures. Because fixtures allow
+docstring examples to access shared objects, there is no need to repeat
+the setup in each example.</p>
+<p><code class="docutils literal notranslate"><span class="pre">pytest</span></code> fixtures can be defined in a <code class="docutils literal notranslate"><span class="pre">conftest.py</span></code> file next to the source
+code. The following example shows a fixture that is run automatically for
+each <code class="docutils literal notranslate"><span class="pre">doctest</span></code> session.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pytest</span>
+
+<span class="kn">from</span> <span class="nn">pyaedt</span> <span class="kn">import</span> <span class="n">Desktop</span>
+
+
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span><span class="p">(</span><span class="n">autouse</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">scope</span><span class="o">=</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">start_aedt</span><span class="p">():</span>
+    <span class="n">desktop</span> <span class="o">=</span> <span class="n">Desktop</span><span class="p">(</span><span class="s2">&quot;2021.1&quot;</span><span class="p">,</span> <span class="n">NG</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">desktop</span><span class="o">.</span><span class="n">disable_autosave</span><span class="p">()</span>
+
+    <span class="c1"># Wait to run doctest on docstrings</span>
+    <span class="k">yield</span> <span class="n">desktop</span>
+    <span class="n">desktop</span><span class="o">.</span><span class="n">force_close_desktop</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Fixtures can also be defined in a separate Python file from
+<code class="docutils literal notranslate"><span class="pre">conftest.py</span></code>. This may help keep the fixtures more organized. Fixtures
+from other files need to be imported in the main <code class="docutils literal notranslate"><span class="pre">conftest.py</span></code> file.</p>
+<p>This example shows how to import fixtures defined in an
+<code class="docutils literal notranslate"><span class="pre">icepak_fixtures.py</span></code> file under the <code class="docutils literal notranslate"><span class="pre">doctest_fixtures</span></code> folder.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pytest</span>
+
+<span class="kn">from</span> <span class="nn">pyaedt</span> <span class="kn">import</span> <span class="n">Desktop</span>
+<span class="kn">from</span> <span class="nn">pyaedt.doctest_fixtures</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="c1"># Import fixtures from other files</span>
+<span class="n">pytest_plugins</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;pyaedt.doctest_fixtures.icepak_fixtures&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span><span class="p">(</span><span class="n">autouse</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">scope</span><span class="o">=</span><span class="s2">&quot;session&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">start_aedt</span><span class="p">():</span>
+    <span class="n">desktop</span> <span class="o">=</span> <span class="n">Desktop</span><span class="p">(</span><span class="s2">&quot;2021.1&quot;</span><span class="p">,</span> <span class="n">NG</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">desktop</span><span class="o">.</span><span class="n">disable_autosave</span><span class="p">()</span>
+
+    <span class="c1"># Wait to run doctest on docstrings</span>
+    <span class="k">yield</span> <span class="n">desktop</span>
+    <span class="n">desktop</span><span class="o">.</span><span class="n">force_close_desktop</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">doctest_namespace</span></code> fixture built into <code class="docutils literal notranslate"><span class="pre">doctest</span></code> allows injecting
+items from a fixture into the context of the <code class="docutils literal notranslate"><span class="pre">doctest</span></code> run. To use this
+feature, the fixture needs to accept the <code class="docutils literal notranslate"><span class="pre">doctest_namespace</span></code> dictionary
+as an argument. Then, objects can be added to the <code class="docutils literal notranslate"><span class="pre">doctest_namespace</span></code>
+dictionary and used directly in a docstring example.</p>
+<p>This examples shows how the <code class="docutils literal notranslate"><span class="pre">Icepak</span></code> object can be stored in the
+<code class="docutils literal notranslate"><span class="pre">doctest_namespace</span></code> dictionary by adding the key <code class="docutils literal notranslate"><span class="pre">icepak</span></code> with the
+<code class="docutils literal notranslate"><span class="pre">Icepak</span></code> object as the value.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pytest</span>
+<span class="kn">from</span> <span class="nn">pyaedt</span> <span class="kn">import</span> <span class="n">Icepak</span>
+
+
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span><span class="p">(</span><span class="n">autouse</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">scope</span><span class="o">=</span><span class="s2">&quot;module&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">create_icepak</span><span class="p">(</span><span class="n">doctest_namespace</span><span class="p">):</span>
+    <span class="n">doctest_namespace</span><span class="p">[</span><span class="s2">&quot;icepak&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Icepak</span><span class="p">(</span><span class="n">projectname</span><span class="o">=</span><span class="s2">&quot;Project1&quot;</span><span class="p">,</span> <span class="n">designname</span><span class="o">=</span><span class="s2">&quot;IcepakDesign1&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">Icepak</span></code> object can then be used directly inside a docstring
+example by referencing the key <code class="docutils literal notranslate"><span class="pre">icepak</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">assign_openings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">air_faces</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Assign openings to a list of faces.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    air_faces : list</span>
+<span class="sd">        List of face names.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    :class:`pyaedt.modules.Boundary.BoundaryObject`</span>
+<span class="sd">        Boundary object when successful or ``None`` when failed.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+
+<span class="sd">    Create an opening boundary for the faces of the &quot;USB_GND&quot; object.</span>
+
+<span class="sd">    &gt;&gt;&gt; faces = icepak.modeler.primitives[&quot;USB_GND&quot;].faces</span>
+<span class="sd">    &gt;&gt;&gt; face_names = [face.id for face in faces]</span>
+<span class="sd">    &gt;&gt;&gt; boundary = icepak.assign_openings(face_names)</span>
+<span class="sd">    pyaedt Info: Face List boundary_faces created</span>
+<span class="sd">    pyaedt Info: Opening Assigned</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="useful-features">
+<h3>Useful Features<a class="headerlink" href="#useful-features" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="ellipses-for-random-output">
+<h4>Ellipses for Random Output<a class="headerlink" href="#ellipses-for-random-output" title="Permalink to this headline">¶</a></h4>
+<p>If the output of some operation in an example cannot be verified exactly,
+an ellipsis (<code class="docutils literal notranslate"><span class="pre">...</span></code>) can be used in the expected output. This allows it
+to match any substring in the actual output.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Examples</span>
+<span class="o">--------</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">desktop</span> <span class="o">=</span> <span class="n">Desktop</span><span class="p">(</span><span class="s2">&quot;2021.1&quot;</span><span class="p">)</span>
+<span class="n">pyaedt</span> <span class="n">Info</span><span class="p">:</span> <span class="n">pyaedt</span> <span class="n">v</span><span class="o">...</span>
+<span class="n">pyaedt</span> <span class="n">Info</span><span class="p">:</span> <span class="n">Python</span> <span class="n">version</span> <span class="o">...</span>
+</pre></div>
+</div>
+<p>To support this, <code class="docutils literal notranslate"><span class="pre">doctest</span></code> must be run with the option set to allow ellipses.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pytest</span> <span class="o">--</span><span class="n">doctest</span><span class="o">-</span><span class="n">modules</span> <span class="o">-</span><span class="n">o</span> <span class="n">ELLIPSIS</span> <span class="n">file</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="doctest-skip">
+<h4><code class="docutils literal notranslate"><span class="pre">doctest</span></code> Skip<a class="headerlink" href="#doctest-skip" title="Permalink to this headline">¶</a></h4>
+<p>The directive <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">doctest:</span> <span class="pre">+SKIP</span></code> can be added to any line of a
+docstring example so that it is not executed in <code class="docutils literal notranslate"><span class="pre">doctest-modules</span></code>.
+This is useful for examples that cannot run within <code class="docutils literal notranslate"><span class="pre">pytest</span></code> or have
+side-effects that will affect the other tests if they are run during
+the <code class="docutils literal notranslate"><span class="pre">doctest</span></code> session.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Examples</span>
+<span class="o">--------</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">desktop</span> <span class="o">=</span> <span class="n">Desktop</span><span class="p">(</span><span class="s2">&quot;2021.1&quot;</span><span class="p">)</span> <span class="c1"># doctest: +SKIP</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright (c) 2022 ANSYS, Inc. All rights reserved.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.2.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

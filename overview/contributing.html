@@ -1,0 +1,409 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contributing &#8212; PyAnsys Developers Guide 0.2.dev0 documentation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/blank.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Guidelines and Best Practices" href="../guidelines/index.html" />
+    <link rel="prev" title="Project Administration" href="administration.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
+    .navbar-light {
+        background-color: black !important;
+    }
+</style>
+
+<div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="https://docs.pyansys.com/">
+  <img src="../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon" >
+      <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+    </span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="index.html">
+  Overview
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../guidelines/index.html">
+  Guidelines and Best Practices
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../library_description/index.html">
+  Library Overview
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../coding_style/index.html">
+  Coding Style
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../documentation_style/index.html">
+  API Documentation Style
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/pyansys/about" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="basic.html">
+   Quick Start Guide
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="administration.html">
+   Project Administration
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Contributing
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-issues">
+   Creating Issues
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#submitting-questions">
+     Submitting Questions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reporting-bugs">
+     Reporting Bugs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#requesting-new-features">
+     Requesting New Features
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#contributing-new-code">
+   Contributing New Code
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#starting-discussions">
+   Starting Discussions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cloning-the-source-repository">
+   Cloning the Source Repository
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#licensing">
+   Licensing
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="contributing">
+<h1>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">¶</a></h1>
+<p>Ansys welcomes all PyAnsys code contributions and wants you to
+understand how to contribute. While we maintain PyAnsys libraries
+and thoroughly review all submissions, we want to foster a community
+that supports user questions and develops new features to make
+our libraries powerful tools for all users. As such, we
+encourage you to submit questions, report bugs, request new
+features, contribute code, and start discussions.</p>
+<p>This page provides general information about contributing code to a
+PyAnsys respository. Contribution information specific to a particular
+repository appears on the <code class="docutils literal notranslate"><span class="pre">Contributing</span></code> page in the respective
+respository’s documentation, including:</p>
+<ul class="simple">
+<li><p>Instructions for cloning the source repository from GitHub</p></li>
+<li><p>URL to the repository’s <code class="docutils literal notranslate"><span class="pre">Issues</span></code> page</p></li>
+</ul>
+<div class="section" id="creating-issues">
+<h2>Creating Issues<a class="headerlink" href="#creating-issues" title="Permalink to this headline">¶</a></h2>
+<p>You create issues to submit questions, report bugs, and request new
+features. When you create an issue, ensure that you provide sufficient
+context, such as application versions and reproduction steps. Also use
+an issue label like “Documentation” to indicate the issue category.</p>
+<p>PyAnsys developers and community members will respond to and hopefully
+resolve your issue. Once an issue is resolved, you are encouraged to
+close it yourself. Otherwise, after a period of inactivity, the PyAnsys
+project support team will use discretion as to whether to close it.</p>
+<p>Should it turn out that your issue is closed erroneously, perhaps because
+a bug fix implemented to resolve your issue did not work, you can re-open
+it with a comment that explains why you have done so. If you need to contact the
+PyAnsys project support team directly, email <a class="reference external" href="mailto:pyansys&#46;support&#37;&#52;&#48;ansys&#46;com">pyansys<span>&#46;</span>support<span>&#64;</span>ansys<span>&#46;</span>com</a>.</p>
+<p>For convenience, here are URLs for <code class="docutils literal notranslate"><span class="pre">Issues</span></code> pages for
+public Ansys repositories:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/pyansys/openapi-common/issues">OpenAPI Common Issues</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pyansys/pyaedt/issues">PyAEDT Issues</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pyansys/pydpf-core/issues">PyDPF-Core Issues</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pyansys/pydpf-post/issues">PyDPF-Post Issues</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pyansys/pymapdl/issues">PyMAPDL Issues</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pyansys/pymapdl-reader/issues">PyMAPDL-Reader Issues</a></p></li>
+</ul>
+<div class="section" id="submitting-questions">
+<h3>Submitting Questions<a class="headerlink" href="#submitting-questions" title="Permalink to this headline">¶</a></h3>
+<p>For general or technical questions about the code in a PyAnsys repository or
+about its application or software usage, create issues on the <code class="docutils literal notranslate"><span class="pre">Issues</span></code> page
+of the repository. This allows PyAnsys developers and community members with
+the needed expertise to collectively address them. It also makes their responses
+available to all users.</p>
+</div>
+<div class="section" id="reporting-bugs">
+<h3>Reporting Bugs<a class="headerlink" href="#reporting-bugs" title="Permalink to this headline">¶</a></h3>
+<p>If you encounter a bug or your workflow crashes while using code in a PyAnsys
+repository, create an issue on the repository’s <code class="docutils literal notranslate"><span class="pre">Issues</span></code> page and tag it with
+an appropriate label so that it can be promptly addressed. In describing the
+issue, be as descriptive as possible so that the issue can be reproduced.
+Whenever possible, provide a traceback, screenshots, and sample files that might
+help the community to address the issue.</p>
+</div>
+<div class="section" id="requesting-new-features">
+<h3>Requesting New Features<a class="headerlink" href="#requesting-new-features" title="Permalink to this headline">¶</a></h3>
+<p>We encourage you to submit ideas for improving the code in a PyAnsys
+repository. To suggest a new feature, create an issue on the repository’s
+<code class="docutils literal notranslate"><span class="pre">Issues</span></code> page and tag this issue with the <code class="docutils literal notranslate"><span class="pre">Feature</span> <span class="pre">Request</span></code> label.
+Use a descriptive title and provide ample background information to help the
+community decide how the feature might be implemented. For example, if you
+would like to see a reader added for a specific file format, in the issue,
+provide a link to documentation for this file format and possibly some sample
+files and screenshots. The community will then use the issue thread to discuss
+the request and provide feedback on how the feature might best be implemented.</p>
+</div>
+</div>
+<div class="section" id="contributing-new-code">
+<h2>Contributing New Code<a class="headerlink" href="#contributing-new-code" title="Permalink to this headline">¶</a></h2>
+<p>When you are ready to start contributing code, see:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../guidelines/dev_practices.html#development-practices"><span class="std std-ref">Development Practices</span></a> for information on how PyAnsys development is
+conducted</p></li>
+<li><p><a class="reference internal" href="../coding_style/best_practices.html#best-practices"><span class="std std-ref">Best Practices</span></a> for information on how to style and format your
+code to adhere to PyAnsys standards</p></li>
+</ul>
+</div>
+<div class="section" id="starting-discussions">
+<h2>Starting Discussions<a class="headerlink" href="#starting-discussions" title="Permalink to this headline">¶</a></h2>
+<p>For general questions about development practices, you should create discussions
+rather than issues. Each PyAnsys repository has its own <code class="docutils literal notranslate"><span class="pre">Discussions</span></code> page.
+For example, to ask a question about a PyMAPDL development practice, you would
+create a discussion on the <a class="reference external" href="https://github.com/pyansys/pymapdl/discussions">PyMAPDL Discussions</a>
+page. It is possible for discussions to lead to the creation of issues.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Because the <code class="docutils literal notranslate"><span class="pre">Discussions</span></code> page is still a GitHub beta feature, usage
+may change in the future.</p>
+</div>
+</div>
+<div class="section" id="cloning-the-source-repository">
+<h2>Cloning the Source Repository<a class="headerlink" href="#cloning-the-source-repository" title="Permalink to this headline">¶</a></h2>
+<p>As mentioned earlier, specific instructions for cloning a source
+repository from GitHub appear on the <code class="docutils literal notranslate"><span class="pre">Contributing</span></code> page in the
+respective repository’s documentation. In the following code for cloning and
+installing the latest version of a PyAnsys repository, <code class="docutils literal notranslate"><span class="pre">&lt;pyansy-repository&gt;</span></code>
+is a placeholder for the name of the repository.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pyansys</span><span class="o">/&lt;</span><span class="n">pyansys</span><span class="o">-</span><span class="n">repository</span><span class="o">&gt;</span>
+<span class="n">cd</span> <span class="o">&lt;</span><span class="n">pyansys</span><span class="o">-</span><span class="n">repository</span><span class="o">&gt;</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="o">.</span>
+</pre></div>
+</div>
+<p>For example, to clone and install the latest version of PyMAPDL,
+you would run the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pyansys</span><span class="o">/</span><span class="n">pymapdl</span>
+<span class="n">cd</span> <span class="n">pymapdl</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="o">.</span>
+</pre></div>
+</div>
+<p>If you want to eventually push a contribution to a
+PyAnsys repository, consider creating a <a class="reference external" href="https://docs.github.com/en/get-started/quickstart/fork-a-repo">fork</a>
+of the repository. For information on how to contribute through
+GitHub, see <a class="reference internal" href="../guidelines/dev_practices.html#development-practices"><span class="std std-ref">Development Practices</span></a>, paying particular attention to <a class="reference internal" href="../guidelines/dev_practices.html#branch-naming"><span class="std std-ref">Branch Naming Conventions</span></a>
+when you are ready to create a pull request.</p>
+</div>
+<div class="section" id="licensing">
+<h2>Licensing<a class="headerlink" href="#licensing" title="Permalink to this headline">¶</a></h2>
+<p>All contributed code will be licensed under the MIT License. For more information, see
+<a class="reference internal" href="../library_description/license.html#license-file"><span class="std std-ref">License File</span></a>. The <code class="docutils literal notranslate"><span class="pre">LICENSE</span></code> file containing the MIT License must be included in
+the root directory of a PyAnsys repository.</p>
+<p>If you did not write the code that you are contributing yourself, it is your
+responsibility to ensure that the existing license for this code is compatible and
+included in the contributed files. You must obtain permission from the original
+author to relicense the code.</p>
+</div>
+</div>
+
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright (c) 2022 ANSYS, Inc. All rights reserved.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.2.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

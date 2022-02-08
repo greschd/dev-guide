@@ -1,0 +1,670 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documentation Practices &#8212; PyAnsys Developers Guide 0.2.dev0 documentation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/blank.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Application Interface Abstraction" href="app_interface_abstraction.html" />
+    <link rel="prev" title="Python Version Support" href="version_support.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
+    .navbar-light {
+        background-color: black !important;
+    }
+</style>
+
+<div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="https://docs.pyansys.com/">
+  <img src="../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon" >
+      <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+    </span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../overview/index.html">
+  Overview
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="reference internal nav-link" href="index.html">
+  Guidelines and Best Practices
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../library_description/index.html">
+  Library Overview
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../coding_style/index.html">
+  Coding Style
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../documentation_style/index.html">
+  API Documentation Style
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/pyansys/about" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="dev_practices.html">
+   Development Practices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="version_support.html">
+   Python Version Support
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Documentation Practices
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="app_interface_abstraction.html">
+   Application Interface Abstraction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data_transfer_and_representation.html">
+   Data Transfer and Abstraction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="logging.html">
+   Logging Guidelines
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="service_abstraction.html">
+   Service Abstraction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="PyMAPDL_WSL_Guide.html">
+   PyAnsys Libraries on a Windows Subsystem for Linux and Docker
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#docstrings">
+   Docstrings
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rst-files">
+   RST Files
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examples">
+   Examples
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#adding-a-new-example">
+     Adding a New Example
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#accessing-a-library-s-documentation">
+   Accessing a Library’s Documentation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#building-documentation-locally">
+   Building Documentation Locally
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#setting-up-your-machine">
+     Setting Up Your Machine
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#installing-build-requirements">
+     Installing Build Requirements
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cloning-a-github-repository">
+   Cloning a GitHub Repository
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-windows-powershell-to-clone-a-github-repository">
+     Using Windows PowerShell to Clone a GitHub Repository
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-gitbash-to-clone-a-github-repository">
+     Using GitBash to Clone a GitHub Repository
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pushing-changes-to-the-github-repository">
+   Pushing Changes to the GitHub Repository
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-git-commands-to-push-changes">
+     Using Git Commands to Push Changes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-git-extensions-to-push-changes">
+     Using Git Extensions to Push Changes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#completing-the-github-pr">
+   Completing the GitHub PR
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="documentation-practices">
+<span id="doc-practices"></span><h1>Documentation Practices<a class="headerlink" href="#documentation-practices" title="Permalink to this headline">¶</a></h1>
+<p>PyAnsys documentation must not only be written but also maintained. If you are new
+to writing developer documentation, see the <a class="reference external" href="https://developers.google.com/style/articles">Google Developer Documentation Style
+Guide</a>. It provides editorial guidelines
+for writing clear and consistent developer documentation, allowing this guide to supply
+guidance specific to PyAnsys library documentation.</p>
+<p>When writing developer documentation, the relationship between code and documenation is
+key. To keep documentation up to date with rapdily evolving code:</p>
+<ul class="simple">
+<li><p>Minimize the content footprint</p></li>
+<li><p>Write <a class="reference external" href="https://developers.google.com/style/timeless-documentation">timeless documentation</a></p></li>
+<li><p>Support contributions from both inside and outside of the development team</p></li>
+<li><p>Perform periodic reviews</p></li>
+</ul>
+<p>The generation of PyAnsys documentation uses <a class="reference external" href="https://www.sphinx-doc.org/en/master/">Sphinx</a>
+and an Ansys-branded theme (pyansys-sphinx-theme) to assemble content comes from docstrings,
+reStructuredText (RST) files, and Python (PY) example files.</p>
+<div class="section" id="docstrings">
+<h2>Docstrings<a class="headerlink" href="#docstrings" title="Permalink to this headline">¶</a></h2>
+<p>Docstrings must be formatted so that Sphinx can parse them. You can use either the
+<code class="docutils literal notranslate"><span class="pre">numpydoc``or</span> <span class="pre">``napoleon</span></code> Sphinx extension:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://pypi.org/project/numpydoc/">numpydoc</a></p></li>
+<li><p><a class="reference external" href="https://pypi.org/project/sphinxcontrib-napoleon/">napoleon</a></p></li>
+</ul>
+</div></blockquote>
+<p>The <code class="docutils literal notranslate"><span class="pre">numpydoc</span></code> extension is generally preferred because it supports an API
+documentation structure with one page per method, providing Python community
+members with documentation like that generated by <a class="reference external" href="https://pandas.pydata.org/">pandas</a>
+and <a class="reference external" href="https://numpy.org/">NumPy</a>. If, however, your API is very linear, you
+might prefer the  <code class="docutils literal notranslate"><span class="pre">napoleon</span></code> extension because it supports a documentation
+structure where everything needed to solve a certain problem can be shown on one page.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">numpydoc</span></code> extension provides its own <a class="reference external" href="https://numpydoc.readthedocs.io/en/latest/format.html">style guide</a>
+and a <a class="reference external" href="https://numpydoc.readthedocs.io/en/latest/">user guide</a> that explains how to use
+the extension with Sphinx. The <code class="docutils literal notranslate"><span class="pre">napoleon</span></code> extension, which parses both numpy and Google
+style docstrings, refers you to the <a class="reference external" href="https://google.github.io/styleguide/pyguide.html">Google Python Style Guide</a>.</p>
+<p>Regardless of the extension that you choose for generating documentation, we
+recommend the use of numpy-style docstrings so that there is consistency
+across PyAnsys libraries. For more information, see:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../documentation_style/docstrings.html#docstrings"><span class="std std-ref">Docstring Standards</span></a></p></li>
+<li><p><a class="reference internal" href="../documentation_style/index.html#api-documentation"><span class="std std-ref">API Documentation Style</span></a></p></li>
+</ul>
+</div>
+<div class="section" id="rst-files">
+<h2>RST Files<a class="headerlink" href="#rst-files" title="Permalink to this headline">¶</a></h2>
+<p>To provide general usage information in your documentation, you use your favorite editor to
+create RST files that you then place in the repository’s <code class="docutils literal notranslate"><span class="pre">doc/</span></code> directory. The <code class="docutils literal notranslate"><span class="pre">index.rst</span></code>
+file in the <code class="docutils literal notranslate"><span class="pre">doc\source</span></code> directory defines the first level of the your documentation hierarchy.
+The <code class="docutils literal notranslate"><span class="pre">toctree</span></code> directive indicates the maximum number of heading levels that the documentation
+is to display. Below this directive are the directory names for your documentation sections.
+Each documentation section has its own <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> file.</p>
+<p>For example, if you open the <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> file in the <code class="docutils literal notranslate"><span class="pre">doc\source</span></code> directory in the
+<code class="docutils literal notranslate"><span class="pre">dev-guide</span></code> repository, you will see that the <code class="docutils literal notranslate"><span class="pre">toctree</span></code> direction indicates that the
+<em>PyAnsys Developer’s Guide</em> is to display a maximum of three heading levels. You then
+see the section structure for this guide:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">overview</span><span class="o">/</span><span class="n">index</span>
+<span class="n">guidelines</span><span class="o">/</span><span class="n">index</span>
+<span class="n">library_description</span><span class="o">/</span><span class="n">index</span>
+<span class="n">coding_style</span><span class="o">/</span><span class="n">index</span>
+<span class="n">documentation_style</span><span class="o">/</span><span class="n">index</span>
+</pre></div>
+</div>
+<p>While you do not include the <code class="docutils literal notranslate"><span class="pre">.rst</span></code> extension when defining the section structure, the
+index file referenced for each section must be named <code class="docutils literal notranslate"><span class="pre">index.rst</span></code>. If you open <code class="docutils literal notranslate"><span class="pre">index.rst</span></code>
+in <code class="docutils literal notranslate"><span class="pre">doc\source\overview</span></code>, you can see that it describes how the PyAnsys project provides
+Python libraries that expose Ansys technologies to the Python ecosystem.</p>
+<p>After you build documentation locally as described in <a class="reference internal" href="#doc-building"><span class="std std-ref">Building Documentation Locally</span></a>, the first-level
+heading in the <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> file for each docuemntation section is shown as clickable link
+in the header of the documentation’s generated HTML output. For more information on defining
+a documentation structure, see the <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/quickstart.html">Sphinx Getting Started</a>
+guide.</p>
+<p>Within RST files, heading titles are followed by a line having a string of characters that is
+the same length as the heading title. If the length of the characters
+under the heading title do not match the length of the heading title, Sphinx will generate a warning.</p>
+<p>For consistency within PyAnsys libraries, the use of these special characters is recommended for
+headings but are not enforced:</p>
+<ul class="simple">
+<li><p>For first-level headings, use ====.</p></li>
+<li><p>For second-level headings, use —.</p></li>
+<li><p>For third-level headings, use ~~~.</p></li>
+</ul>
+<p>For comprehensive syntax information, see the <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/restructuredtext.html">reStrucutredText Markup Specification</a>.</p>
+<p>Because you need to be familiar with the content in the <em>PyAnsys Developer’s Guide</em>, page through
+its HTML pages and then explore the RST files in its repository. This will help you to understand
+the syntax and see how RST files are nested to create this guide.</p>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>Examples come in two formats:</p>
+<ul class="simple">
+<li><p>Basic code snippets demonstrating some functionality</p></li>
+<li><p>Full-fledged standalone examples that are meant to be run as individual downloadable scripts</p></li>
+</ul>
+<p>Basic code snippets should be placed in the <code class="docutils literal notranslate"><span class="pre">doc/source</span></code> directory. Full-fledged
+standalone examples must be placed in the <code class="docutils literal notranslate"><span class="pre">examples</span></code> directory at the root of the
+repository. All of these examples, which should be PEP 8-compliant, are compiled dynamically
+during the build process. Always ensure that your examples run properly locally because
+they will be verified through the CI performed via GitHub Actions.</p>
+<div class="section" id="adding-a-new-example">
+<h3>Adding a New Example<a class="headerlink" href="#adding-a-new-example" title="Permalink to this headline">¶</a></h3>
+<p>Adding a standalone example consists of placing it in an applicable subfolder in the <code class="docutils literal notranslate"><span class="pre">examples</span></code>
+directory. If none of the existing directories match the category of your example, create
+a new subfolder with a <code class="docutils literal notranslate"><span class="pre">README.txt</span></code> file describing the new category. Because these examples
+are built using the <a class="reference external" href="https://sphinx-gallery.github.io/stable/index.html">Sphinx-Gallery</a>
+extension, you must follow its <a class="reference external" href="https://sphinx-gallery.github.io/stable/index.html">coding guidelines</a>.</p>
+<p>PyMAPDL provides a self-demonstrating example of how to <a class="reference external" href="https://mapdldocs.pyansys.com/examples/03-tips-n-tricks/00-example-template.html#ref-how-to-add-an-example-reference-key">add an example reference key</a>.</p>
+</div>
+</div>
+<div class="section" id="accessing-a-library-s-documentation">
+<h2>Accessing a Library’s Documentation<a class="headerlink" href="#accessing-a-library-s-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Documentation for the latest stable release of a PyAnsys library is accessible
+from its repository. You can generally access the latest development version of the
+documentation tracking the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch by adding the prefix <code class="docutils literal notranslate"><span class="pre">dev.</span></code> to
+the URL for the latest stable release. For example, the URL for documentation of the
+latest stable release of PyAEDT is <a class="reference external" href="https://aedtdocs.pyansys.com/">https://aedtdocs.pyansys.com/</a>, and
+the URL for the latest documentation for the development version of PyAEDT is
+<a class="reference external" href="https://dev.aedtdocs.pyansys.com/">https://dev.aedtdocs.pyansys.com/</a>. The latest development versions of both
+the library and its documentation are kept up-to-date automatically via GitHub actions.</p>
+</div>
+<div class="section" id="building-documentation-locally">
+<span id="doc-building"></span><h2>Building Documentation Locally<a class="headerlink" href="#building-documentation-locally" title="Permalink to this headline">¶</a></h2>
+<p>You can build and verify the HTML documentation for a PyAnsys library locally
+by installing Sphinx and other documentation build dependencies.</p>
+<div class="section" id="setting-up-your-machine">
+<h3>Setting Up Your Machine<a class="headerlink" href="#setting-up-your-machine" title="Permalink to this headline">¶</a></h3>
+<p>Anaconda provides Python and tools, such as a Python IDE (Interactive Development Environment),
+a Python command line editor, and Sphinx dependencies. This gives you what you need to get up
+and running.</p>
+<ol class="arabic simple">
+<li><p>Install the <a class="reference external" href="https://www.anaconda.com/products/individual">Anaconda individual edition</a>.</p></li>
+<li><p>If a PyAnsys library already exists, create a directory in which to place a clone of its GitHub repository.</p></li>
+<li><p>Clone the PyAnsys library’s repository. For more information, see <a class="reference internal" href="#cloning"><span class="std std-ref">Cloning a GitHub Repository</span></a>.</p></li>
+<li><p>If you have not yet cloned the <code class="docutils literal notranslate"><span class="pre">pyansys-sphinx-theme</span></code> repository, clone it.</p></li>
+</ol>
+</div>
+<div class="section" id="installing-build-requirements">
+<h3>Installing Build Requirements<a class="headerlink" href="#installing-build-requirements" title="Permalink to this headline">¶</a></h3>
+<p>You can build documentation for the <code class="docutils literal notranslate"><span class="pre">dev_guide</span></code> and <code class="docutils literal notranslate"><span class="pre">pyansys-sphinx-theme</span></code> repositories without
+installing a PyAnsys library in development mode. However, when you push changes that you have made
+in a local branch to the GitHub repository for other PyAnsys libraries, CI checks typically require
+that the full library is installed.</p>
+<ol class="arabic">
+<li><p>In Anaconda Powershell, navigate to the base directory in the library’s cloned repository.</p></li>
+<li><p>If your library must be installed in development mode, enter:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">e</span> <span class="o">.</span>
+</pre></div>
+</div>
+</li>
+<li><p>To install the build requirements for generating documentation, enter:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements_docs</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+</li>
+<li><p>If you are running on a Linux/Mac OS, to build the documentation, enter:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="o">-</span><span class="n">C</span> <span class="n">doc</span> <span class="n">html</span>
+</pre></div>
+</div>
+</li>
+<li><p>If you are running on Windows, to build the documentation, enter two
+commands:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">doc</span>
+<span class="n">make</span><span class="o">.</span><span class="n">bat</span> <span class="n">html</span>
+</pre></div>
+</div>
+<p>As Sphinx is generating HTML output in the library’s <code class="docutils literal notranslate"><span class="pre">doc\_build\html</span></code> folder,
+Anaconda Powershell displays any errors and warnings for unexpected indentations,
+bad target locations for links, missing files, and extra files included in the
+repository but not referenced by any <code class="docutils literal notranslate"><span class="pre">index.rst</span></code> file.</p>
+</li>
+<li><p>Resolve all indicated issues before submitting a pull request (PR) to push
+your changes to the library’s GitHub repository.</p></li>
+<li><p>After local documentation builds successfully, navigate to <code class="docutils literal notranslate"><span class="pre">doc/_build/html/</span></code>
+and use your browser to open the <code class="docutils literal notranslate"><span class="pre">index.html</span></code> file to review the documentation,
+repeating this process until there are no errors or obvious issues.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can use <code class="docutils literal notranslate"><span class="pre">make.bat</span></code> to build more than HTML output. To view a summary of
+all target options, enter <code class="docutils literal notranslate"><span class="pre">make.bat</span></code>.</p>
+</div>
+<p>Your next step is to push your changes to the library’s GitHub repository
+by creating a PR. For more information, see <a class="reference internal" href="#create-pr"><span class="std std-ref">Pushing Changes to the GitHub Repository</span></a>.</p>
+</div>
+</div>
+<div class="section" id="cloning-a-github-repository">
+<span id="cloning"></span><h2>Cloning a GitHub Repository<a class="headerlink" href="#cloning-a-github-repository" title="Permalink to this headline">¶</a></h2>
+<p>While developers likely know how to clone a GitHub repository, technical documentation
+specialists may not know how to do this. You can easily use either Windows PowerShell
+or GitBash.</p>
+<div class="section" id="using-windows-powershell-to-clone-a-github-repository">
+<h3>Using Windows PowerShell to Clone a GitHub Repository<a class="headerlink" href="#using-windows-powershell-to-clone-a-github-repository" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p>In Windows PowerShell, navigate to where you clone repositories on your machine.</p></li>
+<li><p>Go to the <a class="reference external" href="https://github.com/pyansys">PyAnsys GitHub account</a> and select the
+repository that you want to clone.</p>
+<p>Because the list of repositories is quite long, you can use the <code class="docutils literal notranslate"><span class="pre">Find</span>
+<span class="pre">a</span> <span class="pre">repository</span></code> option to search for the repository that you want to clone. For
+example, you can seach for “theme” to find the <code class="docutils literal notranslate"><span class="pre">pyansys-sphinx-theme</span></code> repository.</p>
+</li>
+<li><p>In the upper right corner of the repository, click the green <code class="docutils literal notranslate"><span class="pre">Code</span></code> button to
+drop down a list of options.</p></li>
+<li><p>To the right of the <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code> option, click the clipboard icon to copy the path to
+the repository.</p></li>
+<li><p>Go back to Windows Powershell and type <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> and then click the right
+mouse button to paste the copied path.</p></li>
+<li><p>Press <code class="docutils literal notranslate"><span class="pre">Enter</span></code> to copy the files in the repository to yoour local directory.</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">ls</span></code> to see a list of the files now in your local directory.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In Anaconda Powershell, typing <code class="docutils literal notranslate"><span class="pre">dir</span></code> is the equivalent to typing <code class="docutils literal notranslate"><span class="pre">ls</span></code>.</p>
+</div>
+</div>
+<div class="section" id="using-gitbash-to-clone-a-github-repository">
+<h3>Using GitBash to Clone a GitHub Repository<a class="headerlink" href="#using-gitbash-to-clone-a-github-repository" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>In the folder where you clone PyAnsys repositories, right-click and select
+<code class="docutils literal notranslate"><span class="pre">GitBash</span> <span class="pre">Here</span></code>.</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> followed by the address of the repo to clone.</p></li>
+</ol>
+<p>For example, to clone the <code class="docutils literal notranslate"><span class="pre">pyansys-sphinx-theme</span></code> repository, you would
+enter:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">pyansys</span><span class="o">/</span><span class="n">pyansys</span><span class="o">-</span><span class="n">sphinx</span><span class="o">-</span><span class="n">theme</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="pushing-changes-to-the-github-repository">
+<span id="create-pr"></span><h2>Pushing Changes to the GitHub Repository<a class="headerlink" href="#pushing-changes-to-the-github-repository" title="Permalink to this headline">¶</a></h2>
+<p>Once you have tested your changes in local documentation builds and are
+satisifed with them, you can push them to the library’s GitHub repository.
+You can use Git commands or Git Extension to accomplish this.</p>
+<p>For documentation changes, the branch name should have a prefix of <code class="docutils literal notranslate"><span class="pre">doc\</span></code>
+followed by a short description of what you’ve changed. For more information, see
+<a class="reference internal" href="dev_practices.html#branch-naming"><span class="std std-ref">Branch Naming Conventions</span></a>.</p>
+<div class="section" id="using-git-commands-to-push-changes">
+<h3>Using Git Commands to Push Changes<a class="headerlink" href="#using-git-commands-to-push-changes" title="Permalink to this headline">¶</a></h3>
+<p>This procedure assumes that you are using Git Commands to push your changes to the
+GitHub repository.</p>
+<ol class="arabic">
+<li><p>In Windows Command Prompt, navigate to the directory where you cloned
+the GitHub reposity.</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> to see a summary of the changes that you have made in this
+directory.</p></li>
+<li><p>Create a branch by entering <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">-b</span></code> followed by the name to give
+this branch.</p>
+<p>The option <code class="docutils literal notranslate"><span class="pre">-b</span></code> is for adding a branch. If you were adding a branch with documentation
+changes to the <code class="docutils literal notranslate"><span class="pre">Contributing</span></code> topic, you might enter:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">doc</span><span class="o">/</span><span class="n">edit_contributing</span>
+</pre></div>
+</div>
+</li>
+<li><p>Enter <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">.</span></code> to stage the changed files to commit.</p></li>
+<li><p>Enter <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code> again to see all files that are staged for committing in green.</p></li>
+<li><p>If any unnecessary files are staged, delete them in File Explorer and then enter <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">status</span></code>
+again to ensure that the final red line indicates that these files have been deleted.</p></li>
+<li><p>If you make any additional file changes, type <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">.</span></code> again to restage the files to
+commit.</p></li>
+<li><p>When finished, commit your changes to GitHub history by entering <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-m</span></code> followed by
+a description in quotation marks.</p>
+<p>For the given example, you might enter:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">commit</span> <span class="o">-</span><span class="n">m</span> <span class="s2">&quot;Edit Contributing topic&quot;</span>
+</pre></div>
+</div>
+<p>The number of files changed are shown, followed by the number of insertions and deletions.
+A create mode or rename doc action is then shown for each file.</p>
+</li>
+<li><p>For the first push of a newly created branch, enter <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">--set-upstream</span> <span class="pre">origin</span></code>,
+followed by the branch name.</p>
+<p>For the given example, you would enter:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">push</span> <span class="o">--</span><span class="nb">set</span><span class="o">-</span><span class="n">upstream</span> <span class="n">origin</span> <span class="n">doc</span><span class="o">/</span><span class="n">edit_contributing</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>For any subsequent push, you would simply use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code>.</p>
+</div>
+</li>
+<li><p>Complete the PR as described in <a class="reference internal" href="#complete-pr"><span class="std std-ref">Completing the GitHub PR</span></a>.</p></li>
+</ol>
+</div>
+<div class="section" id="using-git-extensions-to-push-changes">
+<h3>Using Git Extensions to Push Changes<a class="headerlink" href="#using-git-extensions-to-push-changes" title="Permalink to this headline">¶</a></h3>
+<p>This procedure assumes that you are using Git Extensions to push your changes to the
+GitHub repository.</p>
+<ol class="arabic simple">
+<li><p>In Git Extensions, select <code class="docutils literal notranslate"><span class="pre">Commands</span> <span class="pre">&gt;</span> <span class="pre">Create</span> <span class="pre">branch</span></code> and then provide a name for
+the branch that you want to create, using the prefix <code class="docutils literal notranslate"><span class="pre">doc</span></code> followed by a short
+description of what you intend to change.</p></li>
+<li><p>Make your documentation changes in the directory where you cloned the library’s
+GitHub reposity.</p></li>
+<li><p>Test your changes in local documentation builds. For more information, see
+<a class="reference internal" href="#doc-building"><span class="std std-ref">Building Documentation Locally</span></a>.</p></li>
+<li><p>In Git Extensions, click <code class="docutils literal notranslate"><span class="pre">Commit</span></code> to see the files that have been changed in your
+local directory.</p></li>
+<li><p>In the window that opens, stage the files to commit, add a commit message, and then
+click <code class="docutils literal notranslate"><span class="pre">Commit</span></code>.</p></li>
+<li><p>Do a pull from the GitHub repository to your local directory to ensure that there
+are no conflicts with what is in your branch. If there are conflicts, resolve
+them.</p></li>
+<li><p>Do a push of your branch to the GitHub repsitory.</p></li>
+<li><p>Complete the PR as described in <a class="reference internal" href="#complete-pr"><span class="std std-ref">Completing the GitHub PR</span></a>.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="completing-the-github-pr">
+<span id="complete-pr"></span><h2>Completing the GitHub PR<a class="headerlink" href="#completing-the-github-pr" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Go to the GitHub reposity, where you will see an entry for your pushed branch.</p></li>
+<li><p>If the pushed branch resolves an issue, in its description, type <code class="docutils literal notranslate"><span class="pre">Resolves</span> <span class="pre">#</span></code>
+and select from the list of issues that appears.</p></li>
+<li><p>Create either a PR or draft PR, making the title a simple statement because
+the PR title is rendered in our <a class="reference external" href="https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes">automatic release generator</a>.</p>
+<p>If your PR is ready for review, select <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">pull</span> <span class="pre">request</span></code>. Otherwise,
+select <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">draft</span> <span class="pre">pull</span> <span class="pre">request</span></code> and mark it as ready for review once
+you are satisified with it.</p>
+<p>If you need to change a PR title, to its right, click the <code class="docutils literal notranslate"><span class="pre">Edit</span></code> button,
+which becomes a <code class="docutils literal notranslate"><span class="pre">Save</span></code> button while you are in editing mode.</p>
+</li>
+</ol>
+</div>
+</div>
+
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright (c) 2022 ANSYS, Inc. All rights reserved.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.2.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

@@ -1,0 +1,308 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overview &#8212; PyAnsys Developers Guide 0.2.dev0 documentation</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/blank.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Quick Start Guide" href="basic.html" />
+    <link rel="prev" title="PyAnsys Developer’s Guide" href="../index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><style>
+    .navbar-light {
+        background-color: black !important;
+    }
+</style>
+
+<div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="https://docs.pyansys.com/">
+  <img src="../_static/pyansys-logo-black-cropped.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon" >
+      <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+    </span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 current active nav-item">
+ <a class="current reference internal nav-link" href="#">
+  Overview
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../guidelines/index.html">
+  Guidelines and Best Practices
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../library_description/index.html">
+  Library Overview
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../coding_style/index.html">
+  Coding Style
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../documentation_style/index.html">
+  API Documentation Style
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/pyansys/about" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="basic.html">
+   Quick Start Guide
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="administration.html">
+   Project Administration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="contributing.html">
+   Contributing
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#project-organization">
+   Project Organization
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <div class="section" id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+<p>Through the PyAnsys project, Ansys provides Python libraries that
+expose Ansys technologies to the Python ecosystem. These libraries
+are more than reusable scripts. They are clear, concise, and
+maintainable APIs and interfaces. Their useful functions, classes,
+and plugins eliminate the need to write scripts interfacing with low
+level APIs, allowing you to now interact with the product or service
+at a high level in an object-orientated manner.</p>
+<p>These libraries play a vital role in:</p>
+<ul class="simple">
+<li><p>Application automation</p></li>
+<li><p>Machine learning</p></li>
+<li><p>Postprocessing</p></li>
+<li><p>Data visualization</p></li>
+<li><p>Workflow orchestration</p></li>
+<li><p>Data manipulation and export</p></li>
+</ul>
+<p>The libraries also include plugins and interfaces to the vast Python
+ecosystem. Examples include:</p>
+<ul class="simple">
+<li><p>Arrays using <a class="reference external" href="https://numpy.org/">NumPy</a></p></li>
+<li><p>Data structures and tables with <a class="reference external" href="https://pandas.pydata.org/">pandas</a></p></li>
+<li><p>2D visualization using <a class="reference external" href="https://matplotlib.org/">Matplotlib</a></p></li>
+<li><p>3D visualization using <a class="reference external" href="https://docs.pyvista.org/">PyVista</a></p></li>
+<li><p>Advanced scientific computing using <a class="reference external" href="https://www.scipy.org/">SciPy</a></p></li>
+<li><p>Machine learning using <a class="reference external" href="https://www.tensorflow.org/">TensorFlow</a></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are new to GitHub, we suggest that you visit <a class="reference external" href="https://github.com/readme">The ReadMe Project</a>.
+It is a dedicated platform for highlighting the best from the open source software community.
+Monthly newletters provide feature articles, developer stories, guides, and podcasts.</p>
+</div>
+<div class="section" id="project-organization">
+<h2>Project Organization<a class="headerlink" href="#project-organization" title="Permalink to this headline">¶</a></h2>
+<p>The PyAnsys project is hosted on GitHub at <a class="reference external" href="https://github.com/pyansys">PyAnsys</a>. It contains several repositories with
+Python libraries that interface with Ansys products or services.
+To try out a library, visit one of these links:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.pyansys.com/">PyAnsys Project</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pyansys/pymapdl">PyMAPDL</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pyansys/PyAEDT">PyAEDT</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pyansys/DPF-Core">DPF-Core</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pyansys/DPF-Post">DPF-Post</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pyansys/pymapdl-reader">Legacy PyMAPDL Reader</a></p></li>
+</ul>
+<p>If you want to create, develop, or contribute to a PyAnsys library,
+visit these links:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/pyansys/about">PyAnsys Project Developer’s Guide</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pyansys/pyansys-sphinx-theme">PyAnsys Sphinx Theme Documentation</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pyansys/pyansys-helloworld">gRPC Hello-world Example</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pyansys/example-data">Material Example Data</a></p></li>
+</ul>
+<p>Using the following tools, developers can generate library packages from
+PROTO files, create coverage reports, and report on system coverage:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/pyansys/pyansys-protos-generator">pyansys-protos-generator</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pyansys/example-coverage">example-coverage</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pyansys/system-reporting-tool">system-reporting-tool</a></p></li>
+</ul>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright (c) 2022 ANSYS, Inc. All rights reserved.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.2.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>
